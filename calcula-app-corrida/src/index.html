@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula corrida</title>
+</head>
+<body>
+    <input placeholder="Distância em KM" id="inpDistancia" />
+    <input placeholder="Tempo (em min)" id="inpTempo" />
+    <button onclick="calculaCorrida()">Calcula</button>
+
+    <script>
+        function formataMoeda(algumValor) {
+            var valorFormatado = algumValor.toFixed(2).replace('.', ',');
+            return valorFormatado;
+        }
+
+        function calculaCorrida() {
+
+            var ehDistanciaVazia = inpDistancia.value == '';    
+            if(ehDistanciaVazia) {
+                alert('Insira o valor da distância.') 
+                return;
+            }
+
+            // Organizar as entradas e aplicar a regra de negócio
+            var tarifaDinamica =  0.8;
+            var distanciaEmKM = inpDistancia.value * tarifaDinamica;
+            var tempoEmMin = inpTempo.value * 0.26;
+            var preco = distanciaEmKM + tempoEmMin;
+
+            alert("O valor da corrida é: R$" + formataMoeda(preco));
+        }
+    </script>
+</body>
+</html>

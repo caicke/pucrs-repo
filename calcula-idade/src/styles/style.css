@@ -1,0 +1,31 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(23, 23, 54)
+}
+
+body {
+    background-color: rgba(185, 184, 184, 0.421);
+}
+
+#texto-idade {
+    visibility: hidden;
+}
+
+#inpIdade {
+    border-radius: 6px;
+    padding: 4px;
+    border: 1px solid rgb(236, 236, 176);
+}
+
+.form-idade button {
+    padding: 4px;
+    background-color: rgb(2, 10, 42);
+    color: rgb(236, 236, 176);
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+#num-idade {
+    color: rgb(116, 72, 72);
+    font-weight: bold;
+}
