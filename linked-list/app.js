@@ -1,29 +1,56 @@
+class ListNode {
+    constructor(item) {
+        this.element = item
+        this.next = null;
+    }
+}
+
 class LinkedList {
     constructor() {
-        this.head = head;
-        this.nodes = [];
+        this.head = null;
         this.size = 0;
     }
 
-    getSize() {
-        return this.size;
-    }
+    add(element) {
 
-    clear() {
-        this.head = null;
+        var node = new ListNode(element);
+
+        if (this.head == null) {
+            this.head = element
+        }
+        else {
+            let current = this.head;
+            while (current.next) {
+                current = current.next
+            }
+
+            current.next = node;
+        }
+
+        this.size++;
+    }
+    
+    print() {
+        var current = this.head;
+
+        var str = "";
+
+        while (current.next) {
+            str += current.element + " ";
+            current = current.next;
+        }
+
+        str += current.element;
+
+        console.log(str);
     }
 }
 
-class ListNode {
-    constructor(item) {
-        this.next = null;
-        this.data = item;
-    }
-}
-
-let node1 = new ListNode(1);
-let node2 = new ListNode(2);
-
+var node1 = new ListNode(1);
+var node2 = new ListNode(2);
 node1.next = node2;
 
-let list = new LinkedList();
+var list = new LinkedList();
+list.add(node1);
+
+list.print();
