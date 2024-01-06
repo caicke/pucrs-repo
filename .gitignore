@@ -129,4 +129,4 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
-/orm-banco-de-dados/BD/
+/orm-banco-dados/BD/
